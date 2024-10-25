@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+
+/* Styles globaux du corps de la page */
+body {
+    font-family: 'Montserrat', 'Yeseva One';
+    margin: 0;
+    padding: 0;
+    background-color: #041821;
+    color: white;
+}
+
+/* Style de l'en-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #041821;
+    font-size: 24px;
+}
+
+/* Style du nom dans l'en-tête */
+header .div p {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Style des icônes dans l'en-tête */
+header .div1 i {
+    color: white;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+/* Style du message d'accueil */
+#Hello h1 {
+    font-size: 50px;
+    margin: 100px;
+}
+
+/* Couleur verte pour certains textes */
+#vert {
+    color: #1bd79e;
+}
+
+/* Couleur verte pour le point à côté du nom */
+#ptsvert {
+    color: #1bd79e;
+}
+
+/* Style de l'élément sélectionné dans les titres */
+#couleur {
+    background-color: #1bd79e;
+    height: 25px;
+    width: 70px;
+}
+
+/* Style du texte de description */
+.div1 h5 {
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 100px;
+    line-height: 1.5;
+    color: gray;
+}
+
+/* Disposition des catégories */
+.titres {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Style des catégories */
+.titres h3 {
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+}
+
+/* Conteneur de la galerie d'images */
+.div4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Grille d'images dans la galerie */
+.source {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+}
+
+/* Style des images de la galerie */
+.image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #041821;
+    margin-top: 20px;
+}
+
+/* Styles pour les écrans de taille maximale de 600px */
+@media screen and (max-width: 600px) {
+    .source {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 1fr);    
+        gap: 10px;
+    }
+
+    /* Taille des images réduite pour les petits écrans */
+    .image {
+        height: 100px; 
+    }
+
+    /* Masque les images supplémentaires pour optimiser l'affichage mobile */
+    .source img:nth-child(n+10) {
+        display: none;
+    }
+
+    /* Ajustement de la taille du titre principal pour petits écrans */
+    #Hello h1 {
+        font-size: 32px;
+        margin: 20px;
+    }
+
+    .div1 h5 {
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    header .div p {
+        font-size: 24px;
+    }
+
+    .titres {
+        gap: 20px; 
+    }
+
+    #couleur {
+        height: 20px;
+        width: 60px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Styles pour les écrans de 601px à 1024px */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .source {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(5, 1fr);    
+        gap: 12px;
+    }
+
+    /* Taille des images ajustée pour les écrans moyens */
+    .image {
+        height: 150px; 
+    }
+
+    /* Masque les images supplémentaires pour les écrans de taille moyenne */
+    .source img:nth-child(n+16) {
+        display: none;
+    }
+
+    /* Ajustement du texte pour les écrans moyens */
+    #Hello h1 {
+        font-size: 40px;
+        margin: 50px;
+    }
+
+    .div1 h5 {
+        margin-left: 50px;
+        font-size: 16px;
+    }
+
+    header {
+        padding: 15px;
+        font-size: 22px;
+    }
+
+    header .div p {
+        font-size: 28px;
+    }
+
+    .titres {
+        gap: 30px;
+    }
+
+    #couleur {
+        height: 22px;
+        width: 65px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
