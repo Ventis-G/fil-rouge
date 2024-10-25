@@ -6,4 +6,4 @@ CSS
 Le projet consiste a reproduire un modèle donné par un enseignant.
 Il fallait reproduire se modèle en utilisant du HTML et du CSS.
 
-Lien vers le site : 
+Lien vers le site : https://ventis-g.github.io/fil-rouge/
